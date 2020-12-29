@@ -1,0 +1,55 @@
+@startuml
+class Circle {
+- double : radius
+--
++ Circle(double radius)
+--
++ calcArea() : double
++ calcPerimeter() : double
++ toString() : String
+}
+
+class Rectangle {
+- double : side1
+- double : side2
+--
++ Rectangle (double side1, double side2)
+--
++ calcArea() : double
++ calcPerimeter() : double
++ toString() : String
+}
+
+class Square {
+- double : side
+--
++ Square(double side)
+--
++ calcArea() : double
++ calcPerimeter() : double
++ toString() : String
+}
+
+class Triangle {
+- double : side1
+- double : side2
+- double : side3
+--
++ Triangle(double side1, double side2, double side3)
+--
++ calcArea() : double
++ calcPerimeter() : double
++ toString() : String
+}
+
+class Shape {
+--
++ calcArea() : double
++ calcPerimeter() : double
+}
+
+Shape <.. Circle
+Shape <.. Rectangle
+Shape <.. Square
+Shape <.. Triangle
+@enduml
